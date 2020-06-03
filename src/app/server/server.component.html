@@ -1,0 +1,9 @@
+<h1>hello from server component</h1>
+<p>{{'Server'}} with ID {{serverId}} is {{getServerStatus()}}</p>
+<input type="text" [(ngModel)]="serverName">
+<button class="btn btn-brimary" [disabled]="!allowNewServer" (click)="OnServerCreation()">Add Server</button>
+<p> {{serverCreation}}</p>
+<!--<input type="text" (input)="OnUpdateServer($event)">-->
+<hr>
+<p *ngIf="serverCreated">the server was created, server name is {{serverName}}</p>
+
